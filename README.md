@@ -2,6 +2,7 @@
 
 Janet.Core
 main
+- infrastructure 
 - init
 - media manager 
 - output manager 
