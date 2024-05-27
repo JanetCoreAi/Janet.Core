@@ -1,4 +1,5 @@
-﻿using Janet.Core.Services.Infrastructure;
+﻿using Janet.Core.Interfaces;
+using Janet.Core.Services.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Janet.Core.Services.Infrastruture
 {
-    public class InitializationService
+    public class InitializationService : IInitializationService
     {
         private FileManagerService fileManagerService;
         private ConfigurationService configurationService;

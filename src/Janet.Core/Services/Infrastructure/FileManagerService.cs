@@ -1,4 +1,5 @@
-﻿using Janet.Core.Models.Infrastructure;
+﻿using Janet.Core.Interfaces;
+using Janet.Core.Models.Infrastructure;
 using Janet.Core.Utilities;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Janet.Core.Services.Infrastruture
 {
-    public class FileManagerService
+    public class FileManagerService : IFileManagerService
     {
         public FileManagerService()
         {

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Janet.Core.Services.Infrastructure
 {
-    public class ConfigurationService
+    public class ConfigurationService : IConfigurationService
     {
         private FileManagerService fileManagerService;
         public ConfigurationService(FileManagerService _fileManagerService)
