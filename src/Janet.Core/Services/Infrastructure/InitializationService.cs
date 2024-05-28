@@ -1,5 +1,6 @@
 ﻿using Janet.Core.Interfaces;
 using Janet.Core.Services.Infrastructure;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,10 +15,14 @@ namespace Janet.Core.Services.Infrastruture
         private ConfigurationService configurationService;
         private DataManagementService dataManagementService;
 
+        private ILogger<InitializationService> logger;
+
         public InitializationService(FileManagerService _fileManagerService, 
             ConfigurationService _configurationService,
-            DataManagementService _dataManagementService)
+            DataManagementService _dataManagementService,
+            ILogger<InitializationService> _logger)
         {
+            logger = _logger;
             fileManagerService = _fileManagerService;
             configurationService = _configurationService;
             dataManagementService = _dataManagementService;
